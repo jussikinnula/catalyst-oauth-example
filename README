@@ -1,0 +1,13 @@
+Installation:
+- Install cpanm, Catalyst, etc
+- Run cpanm --installdeps . on the root directory
+- Run plackup
+
+Environment:
+- INSTAGRAM_CLIENT_ID = your Instagram client ID
+- INSTAGRAM_CLIENT_SECRET = pair of above
+- FACEBOOK_APP_ID = Facebook application ID
+- FACEBOOK_SECRET = pair of above
+- GOOGLE_CLIENT_ID = Google Code application/client ID
+- GOOGLE_CLIENT_SECRET = pair of above
+- REDIRECT_URI = redirection URI, (defaults to http://localhost:5000)

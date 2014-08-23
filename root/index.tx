@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OAuth2</title>
+    </head>
+    <body>
+
+        <h1>Select your OAuth2 service:</h1>
+
+        <ul>
+            <li><a href="google">Google</a></li>
+            <li><a href="facebook">Facebook</a></li>
+            <li><a href="instagram">Instagram</a></li>
+        </ul>
+
+    </body>
+</html>
