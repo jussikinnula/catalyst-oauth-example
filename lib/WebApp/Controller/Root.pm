@@ -62,7 +62,7 @@ sub instagram_gettoken :Path('/instagram/gettoken') :Args(1) {
     my ( $self, $c, $code ) = @_;
     $self->instagram->set_code($code);  
     my $access_token = $self->instagram->get_access_token();
-    $c->res->body("access_token:".$access_token);
+    $c->res->body("access_token: ".$access_token);
     $c->detach();
 }
 
@@ -96,7 +96,7 @@ sub facebook_gettoken :Path('/facebook/gettoken') :Args(1) {
     my ( $self, $c, $code ) = @_;
     my $token = $self->facebook->request_access_token($code);
     $self->facebook->request_extended_access_token;
-    $c->res->body("access_token:".$token->token."\nexpires:".$token->expires);
+    $c->res->body("access_token: ".$token->token."\nexpires:".$token->expires);
     $c->detach();
 }
 
@@ -130,8 +130,7 @@ sub google_inst :Path('/google/inst') :Args() {
 sub google_gettoken :Path('/google/gettoken') :Args(1) {
     my ( $self, $c, $code ) = @_;
     my $access_token = $self->google->get_access_token($code);
-    print Dumper $access_token;
-    $c->res->body("access_token:".$access_token->{NOA_access_token});
+    $c->res->body("access_token: ".$access_token->{NOA_access_token}."<br>refresh_token: ".$access_token->{NOA_refresh_token});
     $c->detach();
 }
 
